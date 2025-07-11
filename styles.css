@@ -1,0 +1,136 @@
+/* Variables de Diseño */
+:root {
+    --color-primary: #1a2980;
+    --color-secondary: #26cdd0;
+    --color-background: #121621;
+    --color-text: #e0e0e0;
+    --transition-speed: 0.5s;
+}
+
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    perspective: 1000px;
+}
+
+/* Header y navegación */
+header {
+    background-color: rgba(26, 41, 128, 0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+/* Efecto de navegación innovador */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: yellow ;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.8s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary);
+    transform: translateZ(10px);
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Secciones */
+section{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgb(28 22 49 / 99%);
+    border-radius: 15px;
+    box-shadow: -5px -4px 25px 0px rgb(50 197 181 / 65%);
+    border: 1px solid #1a806c;
+    transform: rotateX(20deg);
+    transition: all 0.4s ease;
+}
+main section:hover {
+    transform: rotateX(0deg) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+h1, h2 {
+    color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--color-primary);
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
+
+/* Estilos para Cursor 3D Personalizado */
+body {
+    cursor: none;
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(38, 208, 206, 0.5);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#custom-cursor::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: rgba(38, 208, 206, 0.8);
+    border-radius: 50%;
+}
+
+#custom-cursor.hover {
+    transform: scale(2);
+    background-color: rgba(38, 208, 206, 0.7);
+}
