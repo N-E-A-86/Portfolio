@@ -203,6 +203,7 @@ body {
 .proyecto-destacado {
     border: 2px solid #0078d4;
     box-shadow: 0 4px 16px rgba(0,120,212,0.12);
-    background: linear-gradient(135deg, #52488b 0%, hsl(263, 60%, 55%) 100%);
-    color: var(--color-text);
+        /* Hereda el fondo, color y efecto 3D de .proyecto-card */
+        background: inherit;
+        color: inherit;
 }
