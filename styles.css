@@ -1,3 +1,11 @@
+/* Ajuste de la sección de proyectos y tarjetas */
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
 /* Variables de Diseño */
 :root {
     --color-primary: #1a2980;
@@ -20,6 +28,7 @@ body {
 /* Header y navegación */
 header {
     background-color: rgba(26, 41, 128, 0.8);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     color: white;
     padding: 10px 20px;
@@ -133,4 +142,67 @@ body {
 #custom-cursor.hover {
     transform: scale(2);
     background-color: rgba(38, 208, 206, 0.7);
+}
+.proyecto-card {
+    max-width: 350px;
+    width: 100%;
+    background: linear-gradient(135deg, #1a2980 0%, #26cdd0 100%);
+    color: var(--color-text);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    margin-bottom: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.4s;
+    transform: perspective(800px) rotateX(8deg) scale(1);
+    box-shadow: 0 12px 32px rgba(38,208,206,0.25), 0 2px 8px rgba(0,0,0,0.18);
+    transform: perspective(800px) rotateX(0deg) scale(1.04);
+}
+.proyecto-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #eee;
+}
+.proyecto-info {
+    padding: 20px;
+}
+.proyecto-tecnologias span {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-right: 8px;
+    font-size: 0.95em;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(26,41,128,0.12);
+}
+.proyecto-links {
+    margin-top: 16px;
+}
+.btn-proyecto {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.btn-proyecto:hover {
+    background: #005fa3;
+}
+.proyecto-destacado {
+    border: 2px solid #0078d4;
+    box-shadow: 0 4px 16px rgba(0,120,212,0.12);
+    background: linear-gradient(135deg, #26cdd0 0%, #1a2980 100%);
+    color: var(--color-text);
 }
