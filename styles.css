@@ -146,7 +146,7 @@ body {
 .proyecto-card {
     max-width: 350px;
     width: 100%;
-        background: linear-gradient(135deg, rgba(26, 41, 128, 0.8) 0%, rgba(38, 205, 208, 0.8) 100%);
+    background: linear-gradient(135deg, hwb(247 11% 78%) 0%, hwb(263 15% 31%) 100%);
     color: var(--color-text);
     border: 2px solid #0078d4;
     box-shadow: 0 2px 8px rgba(0,0,0,0.18);
