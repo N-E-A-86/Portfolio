@@ -200,3 +200,18 @@ body {
 .btn-proyecto:hover {
     background: #005fa3;
 }
+.whatsapp-button {
+    background: #ffe600;
+    color: #222;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.whatsapp-button:hover {
+    background: #fff700;
+    color: #0078d4;
+}
